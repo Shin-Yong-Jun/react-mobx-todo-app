@@ -28,12 +28,12 @@ export default class TodoStore {
 
   toggleTodo = (id:number) => {
     const index = this.todos.findIndex((item) => item.id === id);
-    if(index !== -1) {
+    if(index > -1) {
       this.todos[index].completed = !this.todos[index].completed;
     }
   }
 
-  status = () => {
+  get status ()  {
     let completed = 0, remaining = 0;
     this.todos.forEach((todo) => {
       if(todo.completed) {
