@@ -33,7 +33,7 @@ export default class TodoStore {
     }
   }
 
-  status = () {
+  status = () => {
     let completed = 0, remaining = 0;
     this.todos.forEach((todo) => {
       if(todo.completed) {
